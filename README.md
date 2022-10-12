@@ -6,6 +6,10 @@
 
 This repository contains the scripts and configuration files for the GitHub Actions at scale in the Enterprise office hours video series.
 
+### IMPORTANT NOTICE 
+
+**This project has not been updated since its release. Some of the instructions shared below (and in the videos) might not be applicable any more. Use your best judgement when following these instructions!**
+
 ## Agenda
 
 *All episodes were followed by a live Q&A.*
@@ -505,7 +509,15 @@ kubectl get svc -n default
 # Update the ingress controller
 kubectl apply -f ingress/ingress-tls-runners.yaml --namespace default
 
+<<<<<<< HEAD
 kubectl describe ingress ingress-main
+=======
+# !!! IMPORTANT !!!
+#
+# Update the actions-runner-controller/autoscale_webhook.yaml file with your organization's name
+#
+# !!! IMPORTANT !!!
+>>>>>>> 3c73283c7d702685e004a0e1c94d7b155467b92f
 
 # Create a new runner deployment
 kubectl apply -f actions-runner-controller/autoscale_webhook.yaml --namespace default

@@ -1,0 +1,30 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: ak8-runners
+  namespace: default
+spec:
+  replicas: 0
+  template:
+    spec:
+      organization: OPM
+      labels:
+        - vanilla
+        - azure
+      env:
+      - name: RUNNER_FEATURE_FLAG_EPHEMERAL
+        value: "true"
+---
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: HorizontalRunnerAutoscaler
+metadata:
+  name: ak8-runners-deployment-autoscaler
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: ak8-runners
+  minReplicas: 1
+  maxReplicas: 5
+  scaleUpTriggers:
+  - githubEvent: {}
+    duration: "5m"

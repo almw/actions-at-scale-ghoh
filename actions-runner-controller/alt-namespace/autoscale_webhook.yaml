@@ -23,7 +23,7 @@ metadata:
 spec:
   scaleTargetRef:
     name: azure-runners
-  minReplicas: 0
+  minReplicas: 1
   maxReplicas: 5
   scaleUpTriggers:
   - githubEvent: {}

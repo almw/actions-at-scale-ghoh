@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - githubactionsatscaleoh.westeurope.cloudapp.azure.com
+      - opmdsogheactionsrunners.usgovvirginia.cloudapp.usgovcloudapi.net
       secretName: tlsingress
   rules:
-  - host: githubactionsatscaleoh.westeurope.cloudapp.azure.com
+  - host: opmdsogheactionsrunners.usgovvirginia.cloudapp.usgovcloudapi.net
     http:
       paths:
       - path: /
@@ -27,5 +27,5 @@ spec:
         backend:
           service:
             name: actions-runner-controller-github-webhook-server
-            port: 
+            port:
               number: 80

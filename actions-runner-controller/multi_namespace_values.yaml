@@ -19,7 +19,8 @@ enableLeaderElection: true
 #githubAPICacheDuration: 30s
 
 # The URL of your GitHub Enterprise server, if you're using one.
-#githubEnterpriseServerURL: https://github.example.com
+# githubEnterpriseServerURL: https://github.example.com
+githubEnterpriseServerURL: https://code.cicd.opm.gov
 
 # Only 1 authentication method can be deployed at a time
 # Uncomment the configuration you are applying and fill in the details
@@ -29,22 +30,35 @@ authSecret:
   annotations: {}
   ### GitHub Apps Configuration
   ## NOTE: IDs MUST be strings, use quotes
-  github_app_id: "162110"
-  github_app_installation_id: "21870103"
+  github_app_id: "4"
+  github_app_installation_id: "4"
   github_app_private_key: |-
     -----BEGIN RSA PRIVATE KEY-----
-    MIIEpAIBAAKCAQEAuFYkwJ9nXfsrXR4zum9NS+3E3mpH0nU86Cjvw0MIEKUkYZb8
-    TyZu1wjjo3LfAcvveodoqEQmlaYf/x5fIChlZJJiGoH3VP0y3FKVW6YvyJN6q7eK
-    9Jf1z5LH6pbi3Ty33/EGMp6/Wt5L9y97bQ2Nh+KSNRtAWvMFjoDdXh+eXD3sv1lS
-    FY0PiVjvlRAE8AYSdOnPzAXpvc9mG1t9M24yejFRhnt4WuPFkcJBmSpihQDKZfce
-    Jcj7oHJxbUoF07nqwKsQ4TSAD07Uxhx2bW7MadnLiv52sAcpI9pvsf8bIH3rRnS0
-    ONCNFDqQjErWUkZnUC5D2yEvcQO/zDNrR5ET+wIDAQABAoIBAQCEa2WVdi1ERxVc
-    nECesiv92n1tJT4ZAp1RTW8HfxTBGFDtRhBUL5C6KqmUlgV7feu3wqQ9FE//espL
-    .......redacted........revoked..................................
-    PP/o+X8D9LX6GLQC9m91FbyaXpmFC8HQCrCJa0rSYe4RCWir2Cx/b/VhOoh54Xhd
-    Iw3Z8QKBgQDJ8pG8P7VinUt+VaAmgFLXLvSvRDwu5fMNgWS4lc7wB2p7iBLPsC1o
-    6TQy7nq3H7UMu/NccNjytusxNqcryqMmqfJsUUtu8VPbqMc2jw0jcPkdpCqMTEuj
-    8fwkb4KcrKnBtTu+y35sDzwB+aejXsYsuZhyjO4tSUFB2y1BSI6FHA==
+    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
     -----END RSA PRIVATE KEY-----
   ### GitHub PAT Configuration
   #github_token: ""
@@ -163,7 +177,7 @@ githubWebhookServer:
     create: true
     name: "github-webhook-server"
     ### GitHub Webhook Configuration
-    github_webhook_secret_token: "some-very-random-secret"
+    github_webhook_secret_token: "b33a2139-eeba-46d9-a6bb-5ef9841fe8d8"
   imagePullSecrets: []
   nameOverride: "default"
   fullnameOverride: "default-github-webhook-server"
@@ -201,12 +215,12 @@ githubWebhookServer:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     hosts:
-      - host: chart-example.local
+      - host: chart-opmdso.local
         paths: []
     tls: []
     #  - secretName: chart-example-tls
     #    hosts:
-    #      - chart-example.local
+    #      - chart-opmdso.local
 
   # Only one of minAvailable or maxUnavailable can be set
   podDisruptionBudget:
